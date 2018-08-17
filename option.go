@@ -1,5 +1,5 @@
-package simpleIni
+package simpleConf
 
 var (
-    IsDebug = false
+	IsDebug = false
 )

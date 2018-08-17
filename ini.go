@@ -1,4 +1,4 @@
-package simpleIni
+package simpleConf
 
 var instance *sections
 
