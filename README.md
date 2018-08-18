@@ -1,5 +1,11 @@
 # simpleConf
-​	**go version >= 1.9   because use sync.Map to make sure thread safe**	
+## install
+**go get -u github.com/Me1onRind/simpleConf**  
+  
+​**go version >= 1.9   because use sync.Map to make sure thread safe**	
+## introduct
+
+	
 
 ​	Simply way to load the fixed-type like ini file and get value
 
