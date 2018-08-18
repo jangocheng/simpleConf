@@ -79,10 +79,10 @@ func main() {
 
 # API
 
-GetConf : load single configure file
-GetBatchConf: load configure files
-HotLoad: use inotify system call to litsen file change
-GetSection: get section (return an Section struct pointer)
+GetConf : load single configure file  
+GetBatchConf: load configure files  
+HotLoad: use inotify system call to litsen file change  
+GetSection: get section (return an Section struct pointer)  
 GetStr/GetInt/GetFloat/GetInterface: get value under section
 
 # option
