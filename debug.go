@@ -4,15 +4,19 @@ import (
 	"log"
 )
 
-func debugPrintf(format string, values ...interface{}) {
+func warning(format string, values ...interface{}) {
 	if IsDebug {
-		log.Printf("[simpleIni-debug] "+format, values...)
+		log.Printf("[simpleConf-WARNING] "+format, values...)
 	}
 }
 
-func debugPrintln(values ...interface{}) {
-	if IsDebug {
-		log.Print("[simpleIni-debug] ")
-		log.Println(values...)
-	}
-}
+//func info(format string, values ...interface{}) {
+//if IsDebug {
+//log.Printf("[simpleIni-info] "+format, values...)
+//}
+//}
+
+//func notice(format string, values ...interface{}) {
+//if IsDebug {
+//log.Printf("[simpleIni-notice] "+format, values...)
+//}

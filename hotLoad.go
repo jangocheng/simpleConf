@@ -23,7 +23,7 @@ func HotLoad() (err error) {
 	fd, err = syscall.InotifyInit()
 	h.m = make(map[int32]string)
 	if err != nil {
-		debugPrintln(err)
+		warning("%s", err)
 		return err
 	}
 	go loop()
@@ -32,12 +32,12 @@ func HotLoad() (err error) {
 
 func addWatchFile(filename string) {
 	if fd == 0 {
-		debugPrintln("HotLoad() is stopping")
+		// info("%s", "HotLoad() is stopping")
 		return
 	}
 	wd, err := syscall.InotifyAddWatch(fd, filename, IN_MASK)
 	if err != nil {
-		debugPrintln(err)
+		warning("%s", err)
 		return
 	}
 	h.Lock()

@@ -28,7 +28,7 @@ func readFile(filename string) {
 	file, err := os.OpenFile(filename, os.O_RDONLY, 0755)
 	defer file.Close()
 	if err != nil {
-		debugPrintln(err)
+		warning("%s", err)
 		return
 	}
 
@@ -40,7 +40,7 @@ func readFile(filename string) {
 		line, err := buf.ReadString(lineBreak)
 		if err != nil {
 			if err != io.EOF {
-				debugPrintln(err)
+				warning("%s", err)
 			}
 			return
 		}
@@ -57,7 +57,7 @@ func readFile(filename string) {
 
 		k, v := getKeyValue(line)
 		if k == "" {
-			debugPrintf("%d: syntax error: %s", lineNumber, line)
+			warning("%s line %d: syntax error:\"%s\"", filename, lineNumber, line)
 			continue
 		}
 		instance.setValue(sectionName, k, v)
