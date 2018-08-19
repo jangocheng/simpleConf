@@ -50,7 +50,7 @@ import "github.com/me1onrind/simpleIni"
 import "fmt"
 
 func init() {
-    / console output debug info
+   // console output debug info
 	// default is false
 	simpleConf.IsDebug = true
 
@@ -74,7 +74,7 @@ func main() {
 	 * host=127.0.0.1
 	 * port = 3306
 	 */
-	section := simpleConf.GetSection("db1@test")
+	section := simpleConf.GetSection("db@test")
 	fmt.Println(section.GetInt("port")) // 3306
 	fmt.Println(section.GetStr("port")) // ""
 	fmt.Println(section.GetStr("host")) // 127.0.0.1
