@@ -46,11 +46,11 @@ simpleConf.HotLoad()
 ```go
 package main
 
-import "github.com/me1onrind/simpleIni"
+import "github.com/Me1onRind/simpleConf"
 import "fmt"
 
 func init() {
-   // console output debug info
+	// console output debug info
 	// default is false
 	simpleConf.IsDebug = true
 
